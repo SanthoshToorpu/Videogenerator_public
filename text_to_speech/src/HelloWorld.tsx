@@ -7,11 +7,9 @@ import {
 } from "remotion";
 import { Slide1 } from "./Slides/Slide1";
 import { RequestMetadata } from "./lib/interfaces";
-import { useState, useEffect } from "react";
-import { getAudioDurationInSeconds } from "@remotion/media-utils";
+
 import { z, ZodType } from "zod";
 import { zColor } from "@remotion/zod-types";
-import { getTTSFromServer1 } from "./lib/client-utils";
 
 // Define the schema for the component props
 export const mySchema = z.object({
