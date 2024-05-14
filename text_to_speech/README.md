@@ -27,7 +27,10 @@ This template leverages [Remotion](https://www.remotion.dev/) for creating video
 ## Example
 
 Watch a sample video rendered using this template
-<iframe src="https://drive.google.com/file/d/1YfNcM_H6nMaS9A2QdkIwcJwu-KZx924f/preview" width="640" height="480"></iframe>
+<video controls width="100%">
+  <source src="https://drive.google.com/file/d/1YfNcM_H6nMaS9A2QdkIwcJwu-KZx924f/view?usp=drive_link">
+  Your browser does not support the video tag.
+</video>
 
 
 ## Getting Started
