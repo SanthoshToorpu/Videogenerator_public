@@ -66,6 +66,7 @@
    - For bulk video generation, run the `render.ts` script using `ts-node` (install from npm).
 
 ## Additional Notes
+
 - Ensure to refer to the Remotion documentation for details on the `calculateMetadata` function and the render script.
 - For more information, please refer to the [Remotion GTTS Template](https://github.com/thecmdrunner/remotion-gtts-template) repository.
 ```
