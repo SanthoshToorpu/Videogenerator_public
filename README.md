@@ -5,7 +5,7 @@
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/SanthoshToorpu/Videogenerator_public.git
    ```
 
 2. **Update MongoDB and OpenAI URLs:**
