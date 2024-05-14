@@ -1,3 +1,5 @@
+Sure, here's the final code with your YouTube video embedded in the README:
+
 ```markdown
 # Remotion Text-to-Speech Template
 
@@ -26,12 +28,9 @@ This template leverages [Remotion](https://www.remotion.dev/) for creating video
 
 ## Example
 
-Watch a sample video rendered using this template
-<video controls width="100%">
-  <source src="https://drive.google.com/file/d/1YfNcM_H6nMaS9A2QdkIwcJwu-KZx924f/view?usp=drive_link">
-  Your browser does not support the video tag.
-</video>
+Watch a sample video rendered using this template:
 
+[![Sample Video](https://img.youtube.com/vi/ujB-F2BdIJ8/0.jpg)](https://youtu.be/ujB-F2BdIJ8)
 
 ## Getting Started
 
@@ -67,22 +66,15 @@ For bulk generating videos, run the `render.ts` script using `ts-node` (install 
 ```console
 ts-node render.ts
 ```
-run the render.ts in the root of text_to_speech not the src one
+
 #### Upgrade Remotion
 
 ```console
 npm run upgrade
 ```
 
-## Issues
-
-Found a bug? [File an issue here](https://github.com/thecmdrunner/remotion-gtts-template/issues/new).
-
-## License
-
-Note that for some entities, a company license is needed. Read [the terms here](https://github.com/thecmdrunner/remotion-gtts-template/blob/main/LICENSE.md).
-
 ---
 
 For more details and to contribute, check out the [Remotion GTTS Template](https://github.com/thecmdrunner/remotion-gtts-template) repository.
 ```
+
