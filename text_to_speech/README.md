@@ -1,6 +1,3 @@
-Sure, here's the final code with your YouTube video embedded in the README:
-
-```markdown
 # Remotion Text-to-Speech Template
 
 🎬 **Generate Videos with Text-to-Speech!** 🎙️
@@ -32,6 +29,8 @@ Watch a sample video rendered using this template:
 
 [![Sample Video](https://img.youtube.com/vi/ujB-F2BdIJ8/0.jpg)](https://youtu.be/ujB-F2BdIJ8)
 
+Click on the image above to watch the video.
+
 ## Getting Started
 
 - **Root Component:** `src/Root.tsx` contains the `<Composition>` element.
@@ -45,36 +44,3 @@ Watch a sample video rendered using this template:
 
 ```console
 npm install
-```
-
-#### Start Remotion Studio
-
-```console
-npm start
-```
-
-#### Render Video
-
-```console
-npm run build
-```
-
-#### Bulk Video Generation
-
-For bulk generating videos, run the `render.ts` script using `ts-node` (install from npm).
-
-```console
-ts-node render.ts
-```
-
-#### Upgrade Remotion
-
-```console
-npm run upgrade
-```
-
----
-
-For more details and to contribute, check out the [Remotion GTTS Template](https://github.com/thecmdrunner/remotion-gtts-template) repository.
-```
-
