@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const MONGODB_URI = 'mongodb+srv://toorpusanthosh:admin@cluster0.uqzprwt.mongodb.net/csvparser?retryWrites=true&w=majority';
+const MONGODB_URI = '';
 
 const connectToMongoDB = async () => {
   try {
