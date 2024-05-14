@@ -12,10 +12,8 @@ dotenv.config();
 const app = express();
 const upload = multer({ dest: 'uploads/' });
 
-// Connect to MongoDB
 connectToMongoDB();
 
-// Define a schema for the dialogue data
 const dialogueSchema = new mongoose.Schema({
   customersName: String,
   executiveName: String,
@@ -27,12 +25,10 @@ const dialogueSchema = new mongoose.Schema({
   dialogues: [String],
 });
 
-// Create a model based on the schema
 const Dialogue = mongoose.model('Dialogue', dialogueSchema, 'csvdata');
 
 app.use(cors());
 
-// Function to generate dialogues using OpenAI GPT
 const generateDialogues = async (data) => {
   const dialogues = [];
   const openai = require('openai')(`${process.env.OPENAI_API_KEY}`);
@@ -47,7 +43,7 @@ const generateDialogues = async (data) => {
       topP: 1,
       presencePenalty: 0,
       frequencyPenalty: 0,
-      n: 6 // Generating 6 dialogues
+      n: 6
     });
 
     const generatedDialogues = response.data.choices.map(choice => choice.text.trim());
@@ -60,39 +56,30 @@ const generateDialogues = async (data) => {
   return dialogues;
 };
 
-// Endpoint to handle file upload
 app.post('/upload', upload.single('csvFile'), async (req, res) => {
-  // Check if file was provided
   if (!req.file) {
     return res.status(400).json({ error: 'No file uploaded' });
   }
 
-  // Read uploaded file
   const filePath = req.file.path;
 
-  // Parse CSV file
   const parsedData = readAndParseCSV(filePath);
 
-  // Generate dialogues using GPT
   for (const data of parsedData) {
     const dialogues = await generateDialogues(data);
     if (dialogues) {
       data.dialogues = dialogues;
     } else {
-      // Handle error
       return res.status(500).json({ error: 'Failed to generate dialogues' });
     }
   }
 
-  // Delete temporary file after parsing
   fs.unlinkSync(filePath);
 
-  // Save parsed data with generated dialogues to MongoDB
   await Dialogue.insertMany(parsedData);
   res.json({ message: 'Data saved to MongoDB' });
 });
 
-// Function to read and parse CSV file
 const readAndParseCSV = (filePath) => {
   const csvData = [];
   const csvFilePath = path.join(__dirname, filePath);
@@ -114,7 +101,6 @@ const readAndParseCSV = (filePath) => {
   return csvData;
 };
 
-// Start the server
 const PORT = 3001;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
