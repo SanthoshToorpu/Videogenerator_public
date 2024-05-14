@@ -1,4 +1,3 @@
-```markdown
 # Text-to-Speech Video Generator
 
 ## Project Setup
