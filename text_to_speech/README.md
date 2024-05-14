@@ -27,7 +27,7 @@ This template leverages [Remotion](https://www.remotion.dev/) for creating video
 
 Watch a sample video rendered using this template:
 
-[![Sample Video](https://img.youtube.com/vi/ujB-F2BdIJ8/0.jpg)](https://youtu.be/ujB-F2BdIJ8)
+[![Sample Video](https://img.youtube.com/vi/ujB-F2BdIJ8/0.jpg)]
 
 Click on the image above to watch the video.
 
