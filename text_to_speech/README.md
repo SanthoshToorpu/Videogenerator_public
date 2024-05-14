@@ -26,7 +26,9 @@ This template leverages [Remotion](https://www.remotion.dev/) for creating video
 
 ## Example
 
-Watch a sample video rendered using this template [here](https://user-images.githubusercontent.com/38887390/232199560-d275def7-d147-4f29-acc6-5a81d267ba68.mp4).
+Watch a sample video rendered using this template
+<iframe src="https://drive.google.com/file/d/1YfNcM_H6nMaS9A2QdkIwcJwu-KZx924f/preview" width="640" height="480"></iframe>
+
 
 ## Getting Started
 
