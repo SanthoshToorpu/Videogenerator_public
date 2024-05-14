@@ -69,4 +69,9 @@
 
 - Ensure to refer to the Remotion documentation for details on the `calculateMetadata` function and the render script.
 - For more information, please refer to the [Remotion GTTS Template](https://github.com/thecmdrunner/remotion-gtts-template) repository.
+
+## Authors
+
+- [Santhosh Toorpu](https://github.com/SanthoshToorpu)
+- [Abhijith Ippa](https://github.com/AbhijithIppa)
 ```
