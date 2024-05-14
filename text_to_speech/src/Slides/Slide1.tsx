@@ -79,7 +79,7 @@ export const Slide1: React.FC<Slide1Props> = (props) => {
           justifyContent: "center",
         }}
       >
-        <Video loop src={videoSrc} />
+        <Video src={videoSrc} />
       </div>
     </div>
   );

@@ -2,8 +2,10 @@ import {
   AbsoluteFill,
   interpolate,
   Sequence,
+  staticFile,
   useCurrentFrame,
   useVideoConfig,
+  Video
 } from "remotion";
 import { Slide1 } from "./Slides/Slide1";
 import { RequestMetadata } from "./lib/interfaces";
@@ -29,6 +31,8 @@ type HelloWorldProps = RequestMetadata & ZodType<typeof mySchema>;
 export const HelloWorld: React.FC<HelloWorldProps> = (props) => {
   const frame = useCurrentFrame();
   const videoConfig = useVideoConfig();
+  const videoSrc = staticFile('/myvideo.mp4');
+
   const opacity = interpolate(
     frame,
     [videoConfig.durationInFrames - 25, videoConfig.durationInFrames - 15],
@@ -51,7 +55,8 @@ export const HelloWorld: React.FC<HelloWorldProps> = (props) => {
   return (
     <AbsoluteFill
       style={{
-        flex: 1,
+        display: "flex",
+        justifyContent: "center",
         background: "white",
         position: "relative",
       }}
@@ -74,6 +79,7 @@ export const HelloWorld: React.FC<HelloWorldProps> = (props) => {
           </Sequence>
         ))}
       </div>
+      
     </AbsoluteFill>
   );
 };
