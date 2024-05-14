@@ -60,9 +60,9 @@ npm run build
 For bulk generating videos, run the `render.ts` script using `ts-node` (install from npm).
 
 ```console
-ts-node src/render.ts
+ts-node render.ts
 ```
-
+run the render.ts in the root of text_to_speech not the src one
 #### Upgrade Remotion
 
 ```console
